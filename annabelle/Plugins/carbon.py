@@ -4,20 +4,20 @@ from annabelle.core.decorators.errors import capture_err
 from annabelle.utils.functions import make_carbon
 
 
-@Annabelle.on_message(filters.command('carbon')) 
+@Annabelle.on_message(vrn.command('carbon')) 
 @capture_err
 async def carbon_func(_, message):
     if not message.reply_to_message:
         return await message.reply_text(
-            "Reply to a text message to make carbon."
+            "`Reply to a text message to make carbon.`"
         )
     if not message.reply_to_message.text:
         return await message.reply_text(
-            "Reply to a text message to make carbon."
+            "`Reply to a text message to make carbon.`"
         )
     m = await message.reply_text("Preparing Carbon")
     carbon = await make_carbon(message.reply_to_message.text)
-    await m.edit("Uploading")
+    await m.edit("`Uploading`")
     await app.send_document(message.chat.id, carbon)
     await m.delete()
     carbon.close()
