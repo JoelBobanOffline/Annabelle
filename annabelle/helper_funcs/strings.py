@@ -53,3 +53,13 @@ ALIVE_TXT = '''
 **{0}Developers: [Team XD Botz](t.me/XD_Botz)**
 **{0}Repo: [Click Here](github.com/vaishnavofficial/annabelle)**
 '''
+
+MUTE_TXT = '''
+#Mute
+
+{} `has been muted in` {}!
+`untill:` {}
+`reason:` {}
+
+**__Annabelle userbot__**
+'''
