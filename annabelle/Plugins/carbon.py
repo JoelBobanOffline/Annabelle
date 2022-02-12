@@ -1,11 +1,10 @@
-from pyrogram import filters
-
-from annabelle import client, filters
+from annabelle.commands import Annabelle
+from pyrogram import filters as vrn
 from annabelle.core.decorators.errors import capture_err
 from annabelle.utils.functions import make_carbon
 
 
-@app.on_message(filters.command("carbon"))
+@Annabelle.on_message(filters.command('carbon')) 
 @capture_err
 async def carbon_func(_, message):
     if not message.reply_to_message:
