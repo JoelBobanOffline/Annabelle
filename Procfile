@@ -1,1 +1,1 @@
-worker: python3 Annabelle.py
+worker: bash start.sh
