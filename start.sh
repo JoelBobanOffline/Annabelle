@@ -1,7 +1,7 @@
 echo "Cloning Annabelle"
-git clone https://github.com/JoelBobanOffline/Annabelle
+git clone https://github.com/AnnabelleTG/Annabelle
 cd Annabelle
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 echo "Starting!"
 python3 annabelle.py
 python3 bot.py
